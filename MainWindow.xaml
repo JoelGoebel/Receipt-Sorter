@@ -18,8 +18,21 @@
             <ColumnDefinition Width="10"/>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="2" Grid.Column="1" BorderBrush="Black" BorderThickness="2" Name="DropZone"
+                AllowDrop="True" Background="Transparent"
+                DragEnter="DropZone_DragEnter"
+                DragOver="DropZone_DragOver"
+                DragLeave="DropZone_DragLeave"
+                Drop="DropZone_Drop">
+            <TextBlock Name="DropZoneText" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Gray" Height="270"/>
+
+        </Border>
+        
+        <Label Grid.Row="1" Grid.Column="1" Content="Bitte hier die Datei ablegen" FontSize="17" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+ 
+
     </Grid>
 </Window>
